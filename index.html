@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elysium Wealth Evolution | Google Cloud Startup Program</title>
+    <meta name="description" content="AI-Driven Trading & Market-Analysis Infrastructure for the Future of Investing">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    
+    <!-- Mermaid.js -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#1a73e8',
+                primaryTextColor: '#202124',
+                primaryBorderColor: '#1a73e8',
+                lineColor: '#5f6368',
+                secondaryColor: '#34a853',
+                tertiaryColor: '#9334e6',
+                background: '#ffffff',
+                mainBkg: '#f8f9fa',
+                secondBkg: '#e8eaed',
+                border1: '#dadce0',
+                border2: '#5f6368',
+                fontFamily: 'Roboto, sans-serif'
+            }
+        });
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2>Elysium Wealth Evolution</h2>
+                <span class="nav-subtitle">Google Cloud Startup Program</span>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#opportunity" class="nav-link">Opportunity</a></li>
+                <li><a href="#architecture" class="nav-link">Architecture</a></li>
+                <li><a href="#ai-agents" class="nav-link">AI Agents</a></li>
+                <li><a href="#defi" class="nav-link">DeFi</a></li>
+                <li><a href="#forecast" class="nav-link">Forecast</a></li>
+                <li><a href="#why-gcp" class="nav-link">Why GCP</a></li>
+                <li><a href="#impact" class="nav-link">Impact</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#cta" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">AI-Driven Trading & Market-Analysis Infrastructure</h1>
+            <h2 class="hero-subtitle">Modern Infrastructure for the Future of Investing</h2>
+            
+            <div class="entity-badge">
+                <div class="badge-header">
+                    <h3>🏛️ Elysium Wealth Evolution Limited</h3>
+                </div>
+                <div class="badge-details">
+                    <p><strong>📍 Dublin, Ireland</strong> | Company No. 803816</p>
+                    <p><strong>🛡️ Dual-Licensed:</strong> CBI (Ireland) + BVI Fund Manager</p>
+                    <p><strong>💰 €2M Institutional Funding</strong></p>
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value" data-count="14">0</div>
+                    <div class="metric-label">Microservices on GCP</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" data-count="6">0</div>
+                    <div class="metric-label">Blockchain Networks</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" data-count="10">0</div>
+                    <div class="metric-label">DeFi Protocols</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">5.6TB</div>
+                    <div class="metric-label">Data Processing</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">€2M</div>
+                    <div class="metric-label">Institutional Funding</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" data-count="50">0</div>
+                    <div class="metric-label">Fund Managers (Target)</div>
+                </div>
+            </div>
+
+            <p class="hero-tagline">Where AI Meets Blockchain-Based Investing</p>
+            
+            <div class="hero-cta">
+                <a href="#opportunity" class="btn btn-primary">Explore Opportunity</a>
+                <a href="#forecast" class="btn btn-secondary">View Projections</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. The Opportunity Section -->
+    <section id="opportunity" class="section">
+        <div class="container">
+            <h2 class="section-title">The Opportunity</h2>
+            <p class="section-subtitle">Modernizing How Investment Funds Operate</p>
+
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>⚠️ Outdated Technology</h3>
+                    <p>Limited buy/sell options, error-prone fee tracking</p>
+                </div>
+                <div class="problem-card">
+                    <h3>🔗 Systems Don't Talk</h3>
+                    <p>Funds, vendors, and admins can't automate workflows</p>
+                </div>
+                <div class="problem-card">
+                    <h3>😞 Poor User Experience</h3>
+                    <p>Managers and investors juggle disconnected tools</p>
+                </div>
+                <div class="problem-card">
+                    <h3>💸 Expensive & Slow</h3>
+                    <p>Setup takes months and $50-200K. Onboarding new investors: weeks of paperwork</p>
+                </div>
+            </div>
+
+            <div class="solution-section">
+                <h3 class="solution-title">POD Labs Solution: One Modern Platform for Fund Operations</h3>
+                
+                <div class="comparison-table-container">
+                    <h4>Legacy vs POD Comparison</h4>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th class="legacy-col">Legacy</th>
+                                <th class="pod-col">POD</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Avg. Setup Time</strong></td>
+                                <td class="legacy-col">Months</td>
+                                <td class="pod-col">✅ Weeks</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Avg. Setup Costs</strong></td>
+                                <td class="legacy-col">$50-200K</td>
+                                <td class="pod-col">✅ $5-20K</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Investor Onboarding</strong></td>
+                                <td class="legacy-col">Manual, paper-based (multi-week)</td>
+                                <td class="pod-col">✅ Paperless, in-app (same-day)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Buy/Sell Frequency</strong></td>
+                                <td class="legacy-col">Monthly or quarterly</td>
+                                <td class="pod-col">✅ Daily (live fund value)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Payments</strong></td>
+                                <td class="legacy-col">Bank-only, days to weeks</td>
+                                <td class="pod-col">✅ Cash or crypto, instant</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Transparency</strong></td>
+                                <td class="legacy-col">Periodic PDF reports</td>
+                                <td class="pod-col">✅ Live performance data, open ledger</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="partner-logos">
+                    <h4>Trusted Partners</h4>
+                    <div class="logos-grid">
+                        <div class="partner-logo">Coinbase Prime</div>
+                        <div class="partner-logo">Ceffu</div>
+                        <div class="partner-logo">Copper</div>
+                        <div class="partner-logo">140+ Trading Venues</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bankelysium-role">
+                <h3>Bankelysium's Role: Trading & Market-Analysis Infrastructure</h3>
+                <div class="role-grid">
+                    <div class="role-card">
+                        <h4>🤖 Signal Generation & Execution Optimisation</h4>
+                        <p>AI models generate signals and optimise execution for institutional research partnerships</p>
+                    </div>
+                    <div class="role-card">
+                        <h4>⛓️ Multi-Chain Portfolios</h4>
+                        <p>One view across Ethereum, Arbitrum, Base, Optimism, Polygon, and more</p>
+                    </div>
+                    <div class="role-card">
+                        <h4>⚡ Real-Time Blockchain Data</h4>
+                        <p>Instant data processing from lending and trading protocols</p>
+                    </div>
+                    <div class="role-card">
+                        <h4>🌐 140+ Trading Venues</h4>
+                        <p>Exchanges (centralized and decentralized) plus traditional markets</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Architecture Overview -->
+    <section id="architecture" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Architecture Overview</h2>
+            <p class="section-subtitle">POD Labs + Bankelysium: Real-Time, Unified Architecture</p>
+
+            <div class="mermaid-container">
+                <pre class="mermaid">
+flowchart TD
+    subgraph investors [Fund Investors]
+        InvestorApp[Investor App - NeoBank UX]
+        FiatDeposits[Fiat & Stablecoin Deposits]
+    end
+
+    subgraph pod [POD Labs Platform]
+        FundLedger[On-Chain Fund Administrator]
+        PMApp[Portfolio Manager App]
+        PartnerIntegrations[Partner Integrations]
+        UnifiedDataLayer[Unified Data Layer - 140+ Venues]
+    end
+
+    subgraph partners [Service Providers]
+        Custodians[Coinbase Prime, Ceffu, Copper]
+        Banks[Banking Partners]
+        Venues[Trading Venues]
+    end
+
+    subgraph bankelysium [Bankelysium Trading & Analytics Infrastructure - Runs on GCP]
+        subgraph data [Data Layer]
+            Instruments[Instruments Service]
+            TickHandler[Market Tick Handler]
+            Processing[Data Processing]
+        end
+
+        subgraph features [Feature Engineering]
+            DeltaOne[Delta-One Features]
+            Calendar[Calendar Features]
+            Volatility[Volatility Features]
+            Onchain[Onchain/DeFi Features]
+        end
+
+        subgraph ml [AI/ML Pipeline]
+            Training[ML Training Service]
+            Inference[ML Inference Service]
+        end
+
+        subgraph execution [Execution Layer]
+            Strategy[Strategy Service]
+            ExecutionEngine[Execution Engine]
+            Risk[Risk Monitor]
+        end
+    end
+
+    subgraph gcp [Google Cloud Platform]
+        CloudRun[Cloud Run Jobs - 14 Services]
+        GCS[Cloud Storage - 5.6TB]
+        BigQuery[BigQuery Analytics]
+        CloudBuild[Cloud Build CI/CD]
+        ArtifactReg[Artifact Registry - 5 Libraries]
+        SecretMgr[Secret Manager - 50+ Keys]
+        Logging[Cloud Logging]
+    end
+
+    subgraph defi [DeFi Protocols - 6 Chains]
+        AAVE[AAVE V3]
+        Morpho[Morpho]
+        Uniswap[Uniswap V2/V3/V4]
+        Curve[Curve]
+        Lido[Lido stETH]
+        EtherFi[EtherFi weETH]
+    end
+
+    InvestorApp --> FundLedger
+    FiatDeposits --> FundLedger
+    FundLedger --> PMApp
+    PMApp --> UnifiedDataLayer
+    PartnerIntegrations --> Custodians
+    PartnerIntegrations --> Banks
+    PartnerIntegrations --> Venues
+    
+    UnifiedDataLayer -->|Signals & Execution Infrastructure| bankelysium
+    bankelysium -->|Deployed On| gcp
+    features -->|Real-Time Onchain Data| defi
+    Venues -->|Market Data Feed| data
+                </pre>
+            </div>
+
+            <div class="services-table-container">
+                <h3>Service Breakdown</h3>
+                <table class="services-table">
+                    <thead>
+                        <tr>
+                            <th>Service Category</th>
+                            <th>Services</th>
+                            <th>Primary GCP Resources</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Data Ingestion</strong></td>
+                            <td>instruments-service, market-tick-data-handler, market-data-processing-service</td>
+                            <td>Cloud Run (64Gi RAM), GCS (5.6TB)</td>
+                            <td>Real-time market data across 140+ venues</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Data Preparation</strong></td>
+                            <td>features-delta-one, features-calendar, features-volatility, features-onchain</td>
+                            <td>Cloud Run (8Gi RAM avg), GCS (1.5TB)</td>
+                            <td>DeFi: AAVE, Morpho, Lido, Uniswap rates & yields</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AI/ML Pipeline</strong></td>
+                            <td>ml-training-service, ml-inference-service</td>
+                            <td>Cloud Run (16Gi RAM), GCS (3.2GB models)</td>
+                            <td>AI training (quarterly), daily predictions</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Strategy & Execution</strong></td>
+                            <td>strategy-service, execution-services, risk-and-exposure-service, position-balance-monitor</td>
+                            <td>Cloud Run (16Gi RAM), GCS (42GB logs)</td>
+                            <td>Multi-chain execution, instant-borrow strategies</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Infrastructure</strong></td>
+                            <td>unified-cloud-services, unified-events-interface, unified-market-interface, deployment-dashboard</td>
+                            <td>Artifact Registry (Python packages), Cloud Logging</td>
+                            <td>5 shared libraries, 3-tier observability</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. AI Agents & Process Automation -->
+    <section id="ai-agents" class="section">
+        <div class="container">
+            <h2 class="section-title">AI Agents & Process Automation</h2>
+            <p class="section-subtitle">AI That Automates Development, Analytics & Operations</p>
+
+            <div class="agents-overview">
+                <div class="highlight-box" style="background: linear-gradient(135deg, #1a73e8 0%, #9334e6 100%);">
+                    <h3 style="color: white;">AI Agents: 100M+ Tokens/Month</h3>
+                    <p style="color: white;">AI that writes code, analyzes trades, and runs operations—powered by Google's Gemini</p>
+                </div>
+            </div>
+
+            <div class="agents-grid">
+                <div class="agent-card">
+                    <h3>🤖 Development Automation Agents</h3>
+                    <h4>Internal Process Automation</h4>
+                    <ul>
+                        <li><strong>Code Generation:</strong> AI builds new services, tests, and docs</li>
+                        <li><strong>Issue Detection:</strong> Scans 30+ services for problems</li>
+                        <li><strong>Auto-Fix:</strong> Fixes style, imports, and test gaps</li>
+                        <li><strong>PR Management:</strong> Quality checks and merge decisions</li>
+                        <li><strong>Architecture Checks:</strong> Validates each service against standards</li>
+                    </ul>
+                    <p class="spend-estimate"><strong>Vertex AI Spend:</strong> $40K/year (50M tokens/month)</p>
+                </div>
+
+                <div class="agent-card">
+                    <h3>📊 Trading Analytics Agents</h3>
+                    <h4>Internal Intelligence</h4>
+                    <ul>
+                        <li><strong>Trade Analysis:</strong> "Why did this trade lose money?" — AI finds the cause</li>
+                        <li><strong>Pattern Detection:</strong> Spots winning and losing patterns in historical data</li>
+                        <li><strong>Strategy Tuning:</strong> Suggests improvements based on past performance</li>
+                        <li><strong>Risk Monitoring:</strong> Flags unusual activity and safety margins</li>
+                        <li><strong>Market Insights:</strong> "Why did BTC drop 10%?" — AI analyzes data, news, and on-chain metrics</li>
+                    </ul>
+                    <p class="spend-estimate"><strong>Vertex AI Spend:</strong> $30K/year (30M tokens/month)</p>
+                </div>
+
+                <div class="agent-card">
+                    <h3>🎯 Client-Facing Analytics Agents</h3>
+                    <h4>External Use (Fund Managers & Investors)</h4>
+                    <ul>
+                        <li><strong>Strategy Testing:</strong> Type in plain English → AI runs a test → Get a report</li>
+                        <li><strong>Performance Breakdown:</strong> "What drove returns this month?" — AI explains</li>
+                        <li><strong>Risk Reports:</strong> Daily dashboards with AI-written summaries</li>
+                        <li><strong>Custom Queries:</strong> "Show all profitable ETH trades in Q4" — AI fetches the data</li>
+                        <li><strong>Investor Q&A:</strong> Chatbot answers fund performance questions</li>
+                    </ul>
+                    <p class="spend-estimate"><strong>Vertex AI Spend:</strong> $50K/year (60M tokens/month)</p>
+                </div>
+
+                <div class="agent-card">
+                    <h3>⚙️ Operational Intelligence Agents</h3>
+                    <h4>Internal Operations Automation</h4>
+                    <ul>
+                        <li><strong>System Monitoring:</strong> AI reads logs and prioritizes alerts</li>
+                        <li><strong>Anomaly Detection:</strong> Flags unusual patterns in logs and data</li>
+                        <li><strong>Auto-Fix:</strong> Restarts failed jobs, adjusts resources, scales up when needed</li>
+                        <li><strong>Incident Response:</strong> AI finds root causes from system traces</li>
+                        <li><strong>Capacity Planning:</strong> Predicts resource needs from usage</li>
+                    </ul>
+                    <p class="spend-estimate"><strong>Vertex AI Spend:</strong> $20K/year (20M tokens/month)</p>
+                </div>
+            </div>
+
+            <div class="agents-total">
+                <h3>Total AI Agents Spend: $140K/year (160M tokens/month)</h3>
+                <p><strong>Use Case:</strong> Internal automation (40%) + Internal analytics (30%) + Client-facing (30%)</p>
+                <p><strong>Benefit:</strong> Replaces $3M–5M/year in engineering costs + enables $180M+ revenue potential</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. DeFi & Multi-Chain Capabilities -->
+    <section id="defi" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">DeFi & Multi-Chain Capabilities</h2>
+            <p class="section-subtitle">Production-Ready DeFi Trading with AI-Powered Execution</p>
+
+            <div class="defi-grid">
+                <div class="defi-card">
+                    <h3>⛓️ Multi-Chain Support</h3>
+                    <div class="chain-badges">
+                        <span class="badge">Ethereum</span>
+                        <span class="badge">Arbitrum</span>
+                        <span class="badge">Base</span>
+                        <span class="badge">Optimism</span>
+                        <span class="badge">Polygon</span>
+                        <span class="badge">Plasma (Fluid)</span>
+                    </div>
+                    <ul>
+                        <li>The Graph Protocol integration (9 API keys)</li>
+                        <li>Alchemy RPC infrastructure (24-hour caching)</li>
+                    </ul>
+                </div>
+
+                <div class="defi-card">
+                    <h3>🏦 DeFi Protocol Integration</h3>
+                    <div class="protocol-list">
+                        <div class="protocol-item">
+                            <strong>Lending:</strong> AAVE, Morpho — lending rates and rewards
+                        </div>
+                        <div class="protocol-item">
+                            <strong>Staking Yields:</strong> Lido, EtherFi, Ethena — yield tracking
+                        </div>
+                        <div class="protocol-item">
+                            <strong>Decentralized Exchanges:</strong> Uniswap, Curve — liquidity and trading
+                        </div>
+                        <div class="protocol-item">
+                            <strong>Market Sentiment:</strong> Total value locked, stablecoin supply, Fear & Greed Index
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="strategies-section">
+                <h3>AI-Driven Strategies</h3>
+                <div class="strategies-grid">
+                    <div class="strategy-card">
+                        <h4>1. Recursive Staked Basis</h4>
+                        <p>Instant borrowing for leverage, AI timing, one-click execution</p>
+                    </div>
+                    <div class="strategy-card">
+                        <h4>2. AAVE Lending</h4>
+                        <p>Earn yield from lending, AI optimizes rates</p>
+                    </div>
+                    <div class="strategy-card">
+                        <h4>3. Staked Basis</h4>
+                        <p>Capture staking yields with hedging protection</p>
+                    </div>
+                    <div class="strategy-card">
+                        <h4>4. Cross-Protocol Arbitrage</h4>
+                        <p>AI finds price gaps across protocols</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="realtime-features">
+                <h3>⚡ Real-Time Processing</h3>
+                <ul class="feature-list">
+                    <li>✅ Sub-second data updates from blockchain</li>
+                    <li>✅ Live liquidity tracking</li>
+                    <li>✅ Safety margin monitoring for leveraged positions</li>
+                    <li>✅ Pre-checks before instant borrowing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Cloud Service Usage Forecast -->
+    <section id="forecast" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Cloud Service Usage Forecast</h2>
+            <p class="section-subtitle">Year 1 & Year 2 Projected Usage</p>
+
+            <div class="forecast-summary">
+                <div class="summary-card">
+                    <h3>Year 1</h3>
+                    <div class="cost-value">$180,000</div>
+                    <p>MVP + Vertex AI + AI Agents (160M tokens/month)</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Year 2</h3>
+                    <div class="cost-value">$200,000</div>
+                    <p>100+ instruments + Multi-region + Client Platform</p>
+                </div>
+                <div class="summary-card highlight">
+                    <h3>Total 2-Year</h3>
+                    <div class="cost-value">$380,000</div>
+                    <p>109% of $350K allocation (covers base period)</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="costForecastChart"></canvas>
+            </div>
+
+            <div class="services-forecast-table">
+                <table class="forecast-table">
+                    <thead>
+                        <tr>
+                            <th>GCP Service</th>
+                            <th>Usage</th>
+                            <th>Monthly Cost</th>
+                            <th>Annual Cost</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Vertex AI (GPU Training)</strong></td>
+                            <td>400+ models, A100 GPUs, distributed training</td>
+                            <td>$5,000 → $10,000</td>
+                            <td>$60,000 → $120,000</td>
+                            <td>LSTM, Transformers, ensemble models, transfer learning</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vertex AI (Gemini API)</strong></td>
+                            <td>160M tokens/month for AI agents</td>
+                            <td>$6,000 → $12,000</td>
+                            <td>$72,000 → $144,000</td>
+                            <td>Development automation, analytics, client-facing agents</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cloud Run Jobs</strong></td>
+                            <td>14 → 30 services, hourly + daily batch</td>
+                            <td>$4,200 → $6,000</td>
+                            <td>$50,400 → $72,000</td>
+                            <td>Data processing (5.6TB → 50TB), feature engineering</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cloud Storage</strong></td>
+                            <td>5.6TB → 50TB (multi-region)</td>
+                            <td>$500 → $2,000</td>
+                            <td>$6,000 → $24,000</td>
+                            <td>25+ protocols, 15+ chains, lifecycle policies, multi-region replication</td>
+                        </tr>
+                        <tr>
+                            <td><strong>BigQuery</strong></td>
+                            <td>15TB → 50TB queries/month</td>
+                            <td>$300 → $1,000</td>
+                            <td>$3,600 → $12,000</td>
+                            <td>Real-time analytics, client queries, materialized views</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vertex AI Prediction</strong></td>
+                            <td>Real-time inference endpoints</td>
+                            <td>$1,500 → $3,000</td>
+                            <td>$18,000 → $36,000</td>
+                            <td>Low-latency predictions (<100ms), multi-region</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cloud Build</strong></td>
+                            <td>150 → 500 builds/month</td>
+                            <td>$400 → $1,200</td>
+                            <td>$4,800 → $14,400</td>
+                            <td>30 services × CI/CD, E2_HIGHCPU_32, parallel execution</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Artifact Registry</strong></td>
+                            <td>100GB → 500GB</td>
+                            <td>$100 → $500</td>
+                            <td>$1,200 → $6,000</td>
+                            <td>30 services, 10 libraries, Docker images, version history</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cloud Logging</strong></td>
+                            <td>300GB → 1TB logs/month</td>
+                            <td>$150 → $600</td>
+                            <td>$1,800 → $7,200</td>
+                            <td>Detailed event logging, agent logs, 90-day retention</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cloud Monitoring</strong></td>
+                            <td>SLOs, alerts, custom dashboards</td>
+                            <td>$150 → $400</td>
+                            <td>$1,800 → $4,800</td>
+                            <td>30 services, anomaly detection, uptime monitoring</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Load Balancing & CDN</strong></td>
+                            <td>Multi-region, global traffic routing</td>
+                            <td>$200 → $500</td>
+                            <td>$2,400 → $6,000</td>
+                            <td>Client platform, low-latency inference, 3 regions</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Secret Manager & IAM</strong></td>
+                            <td>200+ secrets, multi-region rotation</td>
+                            <td>$50 → $150</td>
+                            <td>$600 → $1,800</td>
+                            <td>25+ protocols, 15+ chains, client API keys</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cloud Scheduler & Tasks</strong></td>
+                            <td>500+ scheduled jobs</td>
+                            <td>$30 → $100</td>
+                            <td>$360 → $1,200</td>
+                            <td>Automated workflows, agent triggers, data pipelines</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Networking & VPC</strong></td>
+                            <td>Multi-region, egress traffic</td>
+                            <td>$300 → $800</td>
+                            <td>$3,600 → $9,600</td>
+                            <td>Data transfer, VPC peering, Cloud NAT</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ai-credits-justification">
+                <h3>💡 AI/ML Spend Breakdown - $404K Over 2 Years (115% of Total $350K)</h3>
+                <div class="justification-grid">
+                    <div class="justification-card">
+                        <h4>Vertex AI GPU Training</h4>
+                        <p>$120K over 2 years: Deep learning (LSTM, Transformers), 400+ models, A100 GPUs, distributed training</p>
+                    </div>
+                    <div class="justification-card">
+                        <h4>Gemini API (AI Agents)</h4>
+                        <p>$144K over 2 years: 160M tokens/month for development automation, analytics, client-facing agents</p>
+                    </div>
+                    <div class="justification-card">
+                        <h4>Data Processing (Cloud Run)</h4>
+                        <p>$122K over 2 years: Feature engineering scale-up (5.6TB → 50TB), 100+ instruments, multi-region</p>
+                    </div>
+                    <div class="justification-card">
+                        <h4>Vertex AI Prediction (Inference)</h4>
+                        <p>$54K over 2 years: Real-time inference endpoints (<100ms), multi-region deployment</p>
+                    </div>
+                    <div class="justification-card">
+                        <h4>BigQuery (Analytics)</h4>
+                        <p>$15.6K over 2 years: Client queries, internal analytics, materialized views (15TB → 50TB scanned)</p>
+                    </div>
+                    <div class="justification-card">
+                        <h4>AutoML & Experiments</h4>
+                        <p>Included in Vertex AI GPU budget: Hyperparameter tuning, Neural Architecture Search</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-dark); font-weight: bold;">
+                    Total AI/ML Spend: $404K | Credits Cover: $350K (100%) | Revenue Funds: $54K (14%)
+                </p>
+                <p style="text-align: center; margin-top: 0.5rem; font-size: 1.125rem; color: var(--text-dark);">
+                    ✅ 100% credit use + $54K from client revenue = strong commitment to Google Cloud
+                </p>
+            </div>
+
+            <div class="credit-burn-rate">
+                <h3>Credit Burn Rate - Full Utilization Strategy</h3>
+                <ul>
+                    <li>Year 1: $180,000 (51% of $350K credits) - Vertex AI GPU training ($60K) + AI Agents ($70K) + Data processing ($50K)</li>
+                    <li>Year 2: $200,000 (57% of remaining $170K) - Additional $30K covered by revenue</li>
+                    <li><strong>Total 2-Year Credits Usage:</strong> $350,000 (100% utilized)</li>
+                    <li><strong>Additional Revenue-Funded:</strong> $30,000 (client platform revenue covers overage)</li>
+                    <li><strong>Monthly Burn Rate:</strong> $15,000 average (Year 1), $16,667 average (Year 2)</li>
+                    <li><strong>Token Usage:</strong> 160M tokens/month Gemini API (AI agents + analytics)</li>
+                </ul>
+                <p style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--secondary-green); font-weight: bold;">
+                    ✅ 100% credit use shows strong commitment to Google Cloud
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Why Google Cloud -->
+    <section id="why-gcp" class="section">
+        <div class="container">
+            <h2 class="section-title">Why Google Cloud</h2>
+            <p class="section-subtitle">Technical Fit & Strategic Alignment</p>
+
+            <div class="why-gcp-grid">
+                <div class="why-card">
+                    <h3>🚀 Technical Fit</h3>
+                    <ul>
+                        <li><strong>Cloud Run Jobs:</strong> Ideal for batch and real-time workloads</li>
+                        <li><strong>GCS Lifecycle Policies:</strong> 73–77% storage cost savings (critical for 5.6TB+ data)</li>
+                        <li><strong>BigQuery:</strong> Efficient analytics on large datasets</li>
+                        <li><strong>Artifact Registry:</strong> Hosts 5 shared Python libraries</li>
+                        <li><strong>Regional Presence:</strong> Tokyo region for low-latency blockchain execution</li>
+                    </ul>
+                </div>
+
+                <div class="why-card">
+                    <h3>🎯 Strategic Alignment</h3>
+                    <ul>
+                        <li><strong>AI-First:</strong> AI training and predictions are core to the infrastructure</li>
+                        <li><strong>Multi-Cloud Ready:</strong> Currently on GCP, ready for AWS expansion</li>
+                        <li><strong>Startup Program Benefits:</strong> Startup Success Manager, $500 in Skills Boost training</li>
+                        <li><strong>Web3 Ecosystem:</strong> Google Cloud's Web3 initiatives align with our blockchain focus</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Impact Story -->
+    <section id="impact" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Impact Story</h2>
+            <p class="section-subtitle">POD Labs' Vision: Modernizing How Investment Funds Work</p>
+
+            <div class="impact-narrative">
+                <blockquote class="vision-quote">
+                    "The financial future we were promised"
+                </blockquote>
+
+                <div class="transformation-section">
+                    <h3>The Transformation</h3>
+                    <div class="transformation-grid">
+                        <div class="transformation-card old-world">
+                            <h4>Old World</h4>
+                            <ul>
+                                <li>Months to launch a fund</li>
+                                <li>$50-200K setup cost</li>
+                                <li>Weeks to onboard investors</li>
+                                <li>Buy/sell monthly or quarterly</li>
+                                <li>Disconnected tools</li>
+                            </ul>
+                        </div>
+                        <div class="transformation-arrow">→</div>
+                        <div class="transformation-card pod-world">
+                            <h4>POD World</h4>
+                            <ul>
+                                <li>Days to launch</li>
+                                <li>$5-20K setup</li>
+                                <li>Same-day onboarding</li>
+                                <li>Daily buy/sell</li>
+                                <li>Banking-style UX</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="impact-metrics">
+                <h3>Metrics (2-Year Projection with $350K Credits)</h3>
+                <table class="impact-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Current (MVP)</th>
+                            <th>Year 1</th>
+                            <th>Year 2</th>
+                            <th>Growth</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Assets Traded</strong></td>
+                            <td>4</td>
+                            <td>20</td>
+                            <td>100+</td>
+                            <td class="growth">25x</td>
+                        </tr>
+                        <tr>
+                            <td><strong>DeFi Protocols</strong></td>
+                            <td>10</td>
+                            <td>18</td>
+                            <td>25+</td>
+                            <td class="growth">2.5x</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Blockchain Networks</strong></td>
+                            <td>6</td>
+                            <td>10</td>
+                            <td>15+</td>
+                            <td class="growth">2.5x</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fund Managers Supported</strong></td>
+                            <td>5</td>
+                            <td>20</td>
+                            <td>50+</td>
+                            <td class="growth">10x</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total Value Managed</strong></td>
+                            <td>$10M</td>
+                            <td>$100M</td>
+                            <td>$500M+</td>
+                            <td class="growth">50x</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Daily Fund Valuations</strong></td>
+                            <td>5</td>
+                            <td>20</td>
+                            <td>100+</td>
+                            <td class="growth">20x</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Investor Accounts</strong></td>
+                            <td>50</td>
+                            <td>300</td>
+                            <td>1,000+</td>
+                            <td class="growth">20x</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ML Models in Production</strong></td>
+                            <td>16</td>
+                            <td>80</td>
+                            <td>400+</td>
+                            <td class="growth">25x</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="roi-section">
+                <h3>100% Credit Utilization + Revenue Co-Investment</h3>
+                <div class="roi-cards">
+                    <div class="roi-card">
+                        <h4>Without Credits</h4>
+                        <p class="roi-value">$380K</p>
+                        <p>Would need $380K cash or slow growth</p>
+                    </div>
+                    <div class="roi-card highlight">
+                        <h4>With Credits</h4>
+                        <p class="roi-value">100% Used</p>
+                        <p>$350K credits + $30K revenue</p>
+                    </div>
+                    <div class="roi-card">
+                        <h4>Impact</h4>
+                        <p class="roi-value">$1.43</p>
+                        <p>In assets managed per $1 in credits ($500M total)</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 2rem; font-size: 1.25rem; color: white; font-weight: bold;">
+                    🚀 $15K/month spend (Year 1) = serious commitment to Google Cloud
+                </p>
+                <p style="text-align: center; margin-top: 1rem; font-size: 1.125rem; color: white;">
+                    Credits enable AI training ($120K) + AI agents ($144K) that would otherwise take 3–4 years to afford
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Team & Credibility -->
+    <section id="team" class="section">
+        <div class="container">
+            <h2 class="section-title">Team & Credibility</h2>
+            <p class="section-subtitle">Traditional Finance + Blockchain + FinTech Expertise</p>
+
+            <div class="team-section">
+                <h3>POD Labs Leadership</h3>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <h4>Patrick Lynch</h4>
+                        <p class="role">CEO</p>
+                        <ul>
+                            <li>Co-founder & CEO, First Circle (fintech)</li>
+                            <li>Associate at Morgan Stanley</li>
+                            <li>Capital formation and fund operations expertise</li>
+                        </ul>
+                    </div>
+                    <div class="team-card">
+                        <h4>Cathal Hardiman</h4>
+                        <p class="role">CCO (Chief Commercial Officer)</p>
+                        <ul>
+                            <li>Head of Institutional Sales at IMC (market maker)</li>
+                            <li>Sales & Business Development at Susquehanna</li>
+                            <li>Strong institutional investor relationships</li>
+                        </ul>
+                    </div>
+                    <div class="team-card">
+                        <h4>Timo Neumann</h4>
+                        <p class="role">CTO</p>
+                        <ul>
+                            <li>DeFi expertise at Fyde Treasury</li>
+                            <li>Physics PhD from Cambridge University</li>
+                            <li>Blockchain technology and smart contracts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="funding-section">
+                <h3>Funding & Traction</h3>
+                <div class="funding-grid">
+                    <div class="funding-card">
+                        <h4>💰 POD Labs</h4>
+                        <p>Raised <strong>€2M</strong> in institutional funding</p>
+                    </div>
+                    <div class="funding-card">
+                        <h4>🛡️ Regulatory Credentials</h4>
+                        <ul>
+                            <li>Fund Administrator: Central Bank of Ireland</li>
+                            <li>Fund Manager: BVI (British Virgin Islands)</li>
+                            <li>Separate legal structures for investor protection</li>
+                        </ul>
+                    </div>
+                    <div class="funding-card">
+                        <h4>🤝 Partner Network</h4>
+                        <ul>
+                            <li>Custodians: Coinbase Prime, Ceffu, Copper</li>
+                            <li>140+ trading venues via Haruka</li>
+                            <li>Banking partners integrated via API</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="milestones-section">
+                <h3>Bankelysium Technical Milestones</h3>
+                <div class="milestones-grid">
+                    <div class="milestone-item">✅ 14 microservices deployed to production (Cloud Run Jobs)</div>
+                    <div class="milestone-item">✅ 5 shared libraries published to Artifact Registry</div>
+                    <div class="milestone-item">✅ 35%+ test coverage with quality gates enforced</div>
+                    <div class="milestone-item">✅ Cloud-agnostic architecture (GCP → AWS migration 60% complete)</div>
+                    <div class="milestone-item">✅ 3-tier event logging (11 lifecycle events per service)</div>
+                    <div class="milestone-item">✅ 5.6TB data lake with Parquet partitioning</div>
+                    <div class="milestone-item">✅ Multi-chain DeFi integration (6 blockchains, 10+ protocols)</div>
+                    <div class="milestone-item">✅ AI/ML pipeline (quarterly training, daily inference)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Call to Action -->
+    <section id="cta" class="section cta-section">
+        <div class="container">
+            <h2 class="section-title">Join Us in Modernizing Investment Fund Infrastructure</h2>
+            
+            <div class="contact-info">
+                <h3>Applicant Information</h3>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <p><strong>Company:</strong> Elysium Wealth Evolution Limited</p>
+                        <p><strong>Address:</strong> 14 Herbert Park, Dublin D04 A9N9, Ireland</p>
+                        <p><strong>Company No:</strong> 803816 (Ireland)</p>
+                        <p><strong>Website:</strong> <a href="https://podlabs.xyz" target="_blank">podlabs.xyz</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <p><strong>Licenses:</strong></p>
+                        <ul>
+                            <li>Central Bank of Ireland (Fund Administrator)</li>
+                            <li>BVI (Fund Manager)</li>
+                        </ul>
+                        <p><strong>Funding:</strong> €2M Institutional</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <h3>Next Steps</h3>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h4>Apply</h4>
+                        <p>Submit to Google Cloud Startup Program</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h4>Technical Deep Dive</h4>
+                        <p>Schedule call with Google Cloud Solutions Architect</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h4>Partnership</h4>
+                        <p>Explore Google Cloud Web3 ecosystem collaboration</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="https://cloud.google.com/startup" target="_blank" class="btn btn-primary btn-large">Visit Google Cloud Startup Program</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-disclaimer">
+                Elysium Wealth Evolution Limited (Ireland Co. 803816) operates the POD Labs platform and partners with Bankelysium for AI-driven trading and market-analysis infrastructure. The platform focuses on signal generation, execution optimisation, and analytics; custody and client-facing operations are handled by regulated counterparties.
+            </p>
+            <p class="footer-legal">
+                Regulated by Central Bank of Ireland (Fund Administrator) and BVI (Fund Manager) | €2M Institutional Funding
+            </p>
+            <p class="footer-copy">
+                © 2026 Elysium Wealth Evolution Limited. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>
