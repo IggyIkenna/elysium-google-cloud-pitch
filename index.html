@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
@@ -21,18 +21,18 @@
             startOnLoad: true,
             theme: 'base',
             themeVariables: {
-                primaryColor: '#1a73e8',
-                primaryTextColor: '#202124',
-                primaryBorderColor: '#1a73e8',
-                lineColor: '#5f6368',
-                secondaryColor: '#34a853',
-                tertiaryColor: '#9334e6',
-                background: '#ffffff',
-                mainBkg: '#f8f9fa',
-                secondBkg: '#e8eaed',
-                border1: '#dadce0',
-                border2: '#5f6368',
-                fontFamily: 'Roboto, sans-serif'
+                primaryColor: '#34d399',
+                primaryTextColor: '#f8fafc',
+                primaryBorderColor: '#34d399',
+                lineColor: 'rgba(255,255,255,0.4)',
+                secondaryColor: '#a78bfa',
+                tertiaryColor: '#60a5fa',
+                background: '#0b1220',
+                mainBkg: 'rgba(255,255,255,0.06)',
+                secondBkg: 'rgba(255,255,255,0.04)',
+                border1: 'rgba(255,255,255,0.16)',
+                border2: 'rgba(255,255,255,0.24)',
+                fontFamily: 'ui-sans-serif, system-ui, sans-serif'
             }
         });
     </script>
@@ -100,8 +100,8 @@
                     <div class="metric-label">DeFi Protocols</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-value">5.6TB</div>
-                    <div class="metric-label">Data Processing</div>
+                    <div class="metric-value">50TB</div>
+                    <div class="metric-label">Data Lake (GCS)</div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-value">€2M</div>
@@ -198,16 +198,19 @@
                 <div class="partner-logos">
                     <h4>Trusted Partners</h4>
                     <div class="logos-grid">
+                        <div class="partner-logo">Odum</div>
                         <div class="partner-logo">Coinbase Prime</div>
                         <div class="partner-logo">Ceffu</div>
                         <div class="partner-logo">Copper</div>
                         <div class="partner-logo">140+ Trading Venues</div>
                     </div>
+                    <p class="partner-note">Odum have built substantial portions of the proprietary trading and market-analysis framework that enables this platform to launch.</p>
                 </div>
             </div>
 
             <div class="bankelysium-role">
-                <h3>Bankelysium's Role: Trading & Market-Analysis Infrastructure</h3>
+                <h3>Trading & Market-Analysis Infrastructure</h3>
+                <p class="infra-note">Elysium partners with Bankelysium and builds on Odum's framework for proprietary trading and market-analysis infrastructure — signal generation, execution optimisation, and AI-driven analytics for institutional research partnerships.</p>
                 <div class="role-grid">
                     <div class="role-card">
                         <h4>🤖 Signal Generation & Execution Optimisation</h4>
@@ -285,7 +288,7 @@ flowchart TD
 
     subgraph gcp [Google Cloud Platform]
         CloudRun[Cloud Run Jobs - 14 Services]
-        GCS[Cloud Storage - 5.6TB]
+        GCS[Cloud Storage - 50TB]
         BigQuery[BigQuery Analytics]
         CloudBuild[Cloud Build CI/CD]
         ArtifactReg[Artifact Registry - 5 Libraries]
@@ -332,8 +335,8 @@ flowchart TD
                         <tr>
                             <td><strong>Data Ingestion</strong></td>
                             <td>instruments-service, market-tick-data-handler, market-data-processing-service</td>
-                            <td>Cloud Run (64Gi RAM), GCS (5.6TB)</td>
-                            <td>Real-time market data across 140+ venues</td>
+                            <td>Cloud Run (64Gi RAM), GCS 50TB</td>
+                            <td>Batch/T+1 backfills + live; 140+ venues</td>
                         </tr>
                         <tr>
                             <td><strong>Data Preparation</strong></td>
@@ -344,8 +347,8 @@ flowchart TD
                         <tr>
                             <td><strong>AI/ML Pipeline</strong></td>
                             <td>ml-training-service, ml-inference-service</td>
-                            <td>Cloud Run (16Gi RAM), GCS (3.2GB models)</td>
-                            <td>AI training (quarterly), daily predictions</td>
+                            <td>Vertex AI (GPU), Cloud Run (16Gi RAM), GCS (3.2GB models)</td>
+                            <td>Price action prediction (LSTM, Transformers, LightGBM classifier), quarterly training, daily inference; future: HFT signals for execution optimization</td>
                         </tr>
                         <tr>
                             <td><strong>Strategy & Execution</strong></td>
@@ -372,9 +375,9 @@ flowchart TD
             <p class="section-subtitle">AI That Automates Development, Analytics & Operations</p>
 
             <div class="agents-overview">
-                <div class="highlight-box" style="background: linear-gradient(135deg, #1a73e8 0%, #9334e6 100%);">
-                    <h3 style="color: white;">AI Agents: 100M+ Tokens/Month</h3>
-                    <p style="color: white;">AI that writes code, analyzes trades, and runs operations—powered by Google's Gemini</p>
+                <div class="highlight-box agents-highlight">
+                    <h3>AI Agents: 100M+ Tokens/Month</h3>
+                    <p>AI that writes code, analyzes trades, and runs operations—powered by Google's Gemini</p>
                 </div>
             </div>
 
@@ -525,18 +528,18 @@ flowchart TD
             <div class="forecast-summary">
                 <div class="summary-card">
                     <h3>Year 1</h3>
-                    <div class="cost-value">$180,000</div>
-                    <p>MVP + Vertex AI + AI Agents (160M tokens/month)</p>
+                    <div class="cost-value">$192,000</div>
+                    <p>MVP + ML training (price action) + Inference + AI Agents (160M tokens/month)</p>
                 </div>
                 <div class="summary-card">
                     <h3>Year 2</h3>
-                    <div class="cost-value">$200,000</div>
-                    <p>100+ instruments + Multi-region + Client Platform</p>
+                    <div class="cost-value">$218,000</div>
+                    <p>100+ instruments + HFT-ready inference + Multi-region + Client Platform</p>
                 </div>
                 <div class="summary-card highlight">
                     <h3>Total 2-Year</h3>
-                    <div class="cost-value">$380,000</div>
-                    <p>109% of $350K allocation (covers base period)</p>
+                    <div class="cost-value">$410,000</div>
+                    <p>117% of $350K allocation + $60K revenue-funded</p>
                 </div>
             </div>
 
@@ -559,9 +562,9 @@ flowchart TD
                         <tr>
                             <td><strong>Vertex AI (GPU Training)</strong></td>
                             <td>400+ models, A100 GPUs, distributed training</td>
-                            <td>$5,000 → $10,000</td>
-                            <td>$60,000 → $120,000</td>
-                            <td>LSTM, Transformers, ensemble models, transfer learning</td>
+                            <td>$5,800 → $11,500</td>
+                            <td>$70,000 → $138,000</td>
+                            <td>Price action prediction (LSTM, Transformers, LightGBM classifier), execution optimization models, ensemble learning, transfer learning</td>
                         </tr>
                         <tr>
                             <td><strong>Vertex AI (Gemini API)</strong></td>
@@ -575,11 +578,11 @@ flowchart TD
                             <td>14 → 30 services, hourly + daily batch</td>
                             <td>$4,200 → $6,000</td>
                             <td>$50,400 → $72,000</td>
-                            <td>Data processing (5.6TB → 50TB), feature engineering</td>
+                            <td>Batch/T+1 backfills, feature engineering (50TB)</td>
                         </tr>
                         <tr>
                             <td><strong>Cloud Storage</strong></td>
-                            <td>5.6TB → 50TB (multi-region)</td>
+                            <td>50TB (GCS data lake, multi-region)</td>
                             <td>$500 → $2,000</td>
                             <td>$6,000 → $24,000</td>
                             <td>25+ protocols, 15+ chains, lifecycle policies, multi-region replication</td>
@@ -594,9 +597,9 @@ flowchart TD
                         <tr>
                             <td><strong>Vertex AI Prediction</strong></td>
                             <td>Real-time inference endpoints</td>
-                            <td>$1,500 → $3,000</td>
-                            <td>$18,000 → $36,000</td>
-                            <td>Low-latency predictions (<100ms), multi-region</td>
+                            <td>$2,000 → $4,000</td>
+                            <td>$24,000 → $48,000</td>
+                            <td>Price action inference, low-latency (<100ms); future: HFT-ready execution signals for execution services</td>
                         </tr>
                         <tr>
                             <td><strong>Cloud Build</strong></td>
@@ -659,11 +662,11 @@ flowchart TD
             </div>
 
             <div class="ai-credits-justification">
-                <h3>💡 AI/ML Spend Breakdown - $404K Over 2 Years (115% of Total $350K)</h3>
+                <h3>💡 AI/ML Spend Breakdown - $454K Over 2 Years (91% of Total $410K)</h3>
                 <div class="justification-grid">
                     <div class="justification-card">
                         <h4>Vertex AI GPU Training</h4>
-                        <p>$120K over 2 years: Deep learning (LSTM, Transformers), 400+ models, A100 GPUs, distributed training</p>
+                        <p>$208K over 2 years: Price action prediction (LSTM, Transformers, LightGBM classifier), execution optimization models, 400+ models, A100 GPUs</p>
                     </div>
                     <div class="justification-card">
                         <h4>Gemini API (AI Agents)</h4>
@@ -671,11 +674,11 @@ flowchart TD
                     </div>
                     <div class="justification-card">
                         <h4>Data Processing (Cloud Run)</h4>
-                        <p>$122K over 2 years: Feature engineering scale-up (5.6TB → 50TB), 100+ instruments, multi-region</p>
+                        <p>$122K over 2 years: Feature engineering on 50TB data lake, 100+ instruments, multi-region</p>
                     </div>
                     <div class="justification-card">
                         <h4>Vertex AI Prediction (Inference)</h4>
-                        <p>$54K over 2 years: Real-time inference endpoints (<100ms), multi-region deployment</p>
+                        <p>$72K over 2 years: Real-time price action inference (<100ms); future: HFT-ready execution signals for execution services</p>
                     </div>
                     <div class="justification-card">
                         <h4>BigQuery (Analytics)</h4>
@@ -687,25 +690,26 @@ flowchart TD
                     </div>
                 </div>
                 <p style="text-align: center; margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-dark); font-weight: bold;">
-                    Total AI/ML Spend: $404K | Credits Cover: $350K (100%) | Revenue Funds: $54K (14%)
+                    Total AI/ML Spend: $454K | Credits Cover: $350K (100%) | Revenue Funds: $60K (15%)
                 </p>
                 <p style="text-align: center; margin-top: 0.5rem; font-size: 1.125rem; color: var(--text-dark);">
-                    ✅ 100% credit use + $54K from client revenue = strong commitment to Google Cloud
+                    ✅ 100% credit use + $60K from client revenue = strong commitment to Google Cloud
                 </p>
             </div>
 
             <div class="credit-burn-rate">
                 <h3>Credit Burn Rate - Full Utilization Strategy</h3>
                 <ul>
-                    <li>Year 1: $180,000 (51% of $350K credits) - Vertex AI GPU training ($60K) + AI Agents ($70K) + Data processing ($50K)</li>
-                    <li>Year 2: $200,000 (57% of remaining $170K) - Additional $30K covered by revenue</li>
+                    <li>Year 1: $192,000 (55% of $350K credits) - ML training price action ($70K) + Inference ($24K) + AI Agents ($72K) + Data processing ($26K)</li>
+                    <li>Year 2: $218,000 (62% of remaining $158K) - Additional $60K covered by revenue</li>
                     <li><strong>Total 2-Year Credits Usage:</strong> $350,000 (100% utilized)</li>
-                    <li><strong>Additional Revenue-Funded:</strong> $30,000 (client platform revenue covers overage)</li>
-                    <li><strong>Monthly Burn Rate:</strong> $15,000 average (Year 1), $16,667 average (Year 2)</li>
+                    <li><strong>Additional Revenue-Funded:</strong> $60,000 (client platform revenue covers overage)</li>
+                    <li><strong>Monthly Burn Rate:</strong> $16,000 average (Year 1), $18,167 average (Year 2)</li>
+                    <li><strong>ML Workloads:</strong> Price action prediction (training + inference), future HFT execution signals</li>
                     <li><strong>Token Usage:</strong> 160M tokens/month Gemini API (AI agents + analytics)</li>
                 </ul>
                 <p style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--secondary-green); font-weight: bold;">
-                    ✅ 100% credit use shows strong commitment to Google Cloud
+                    ✅ >100% credit use through strong commitment to Google Cloud
                 </p>
             </div>
         </div>
@@ -721,11 +725,11 @@ flowchart TD
                 <div class="why-card">
                     <h3>🚀 Technical Fit</h3>
                     <ul>
-                        <li><strong>Cloud Run Jobs:</strong> Ideal for batch and real-time workloads</li>
-                        <li><strong>GCS Lifecycle Policies:</strong> 73–77% storage cost savings (critical for 5.6TB+ data)</li>
-                        <li><strong>BigQuery:</strong> Efficient analytics on large datasets</li>
-                        <li><strong>Artifact Registry:</strong> Hosts 5 shared Python libraries</li>
-                        <li><strong>Regional Presence:</strong> Tokyo region for low-latency blockchain execution</li>
+                        <li><strong>Cloud Run Jobs:</strong> Batch/T+1 backfills (instruments, tick handler, processing)</li>
+                        <li><strong>Long-running VMs:</strong> Live services (event-driven, Pub/Sub)</li>
+                        <li><strong>GCS 50TB:</strong> Hive-partitioned Parquet, lifecycle policies; Hive external tables for BigQuery</li>
+                        <li><strong>Firebase:</strong> Live config and feature flags</li>
+                        <li><strong>Vertex AI:</strong> Planned for ML (training, prediction, feature store)</li>
                     </ul>
                 </div>
 
@@ -733,7 +737,7 @@ flowchart TD
                     <h3>🎯 Strategic Alignment</h3>
                     <ul>
                         <li><strong>AI-First:</strong> AI training and predictions are core to the infrastructure</li>
-                        <li><strong>Multi-Cloud Ready:</strong> Currently on GCP, ready for AWS expansion</li>
+                        <li><strong>Cloud-Agnostic Architecture:</strong> GCP as primary platform, portable design</li>
                         <li><strong>Startup Program Benefits:</strong> Startup Success Manager, $500 in Skills Boost training</li>
                         <li><strong>Web3 Ecosystem:</strong> Google Cloud's Web3 initiatives align with our blockchain focus</li>
                     </ul>
@@ -956,9 +960,9 @@ flowchart TD
                     <div class="milestone-item">✅ 35%+ test coverage with quality gates enforced</div>
                     <div class="milestone-item">✅ Cloud-agnostic architecture (GCP → AWS migration 60% complete)</div>
                     <div class="milestone-item">✅ 3-tier event logging (11 lifecycle events per service)</div>
-                    <div class="milestone-item">✅ 5.6TB data lake with Parquet partitioning</div>
+                    <div class="milestone-item">✅ 50TB data lake, Hive-partitioned Parquet, BigQuery external tables</div>
                     <div class="milestone-item">✅ Multi-chain DeFi integration (6 blockchains, 10+ protocols)</div>
-                    <div class="milestone-item">✅ AI/ML pipeline (quarterly training, daily inference)</div>
+                    <div class="milestone-item">✅ AI/ML pipeline (LSTM, Transformers, LightGBM classifier; price action prediction, quarterly training, daily inference; future: HFT execution signals)</div>
                 </div>
             </div>
         </div>
@@ -1010,8 +1014,15 @@ flowchart TD
                 </div>
             </div>
 
-            <div class="cta-buttons">
-                <a href="https://cloud.google.com/startup" target="_blank" class="btn btn-primary btn-large">Visit Google Cloud Startup Program</a>
+            <div class="entity-structure">
+                <h3>Entity Structure & Odum Relationship</h3>
+                <p>Elysium has an existing relationship with <strong>Odum</strong>, who have built substantial portions of the proprietary trading and market-analysis framework that enables this platform to launch. Odum develops and operates proprietary trading and market-analysis infrastructure used for internal strategies and institutional research partnerships.</p>
+                <ul>
+                    <li><strong>Separate legal entities:</strong> Elysium (Ireland Co. 803816) vs Odum — no legal tie, no common shareholders</li>
+                    <li><strong>Separate GCP projects:</strong> central-element-323112 (Elysium) vs Odum's project(s) — no shared credits</li>
+                    <li><strong>Independent funding:</strong> Elysium raised €2M separately, not affiliated with Odum</li>
+                    <li><strong>Client exposure:</strong> Limited to research, signals, or segregated mandates handled by regulated counterparties</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -1020,7 +1031,7 @@ flowchart TD
     <footer class="footer">
         <div class="container">
             <p class="footer-disclaimer">
-                Elysium Wealth Evolution Limited (Ireland Co. 803816) operates the POD Labs platform and partners with Bankelysium for AI-driven trading and market-analysis infrastructure. The platform focuses on signal generation, execution optimisation, and analytics; custody and client-facing operations are handled by regulated counterparties.
+                Elysium Wealth Evolution Limited (Ireland Co. 803816) operates the POD Labs platform and builds on Odum's framework for proprietary trading and market-analysis infrastructure. The platform focuses on signal generation, execution optimisation, and AI-driven analytics. Client exposure, where applicable, is limited to research, signals, or segregated mandates handled by regulated counterparties.
             </p>
             <p class="footer-legal">
                 Regulated by Central Bank of Ireland (Fund Administrator) and BVI (Fund Manager) | €2M Institutional Funding

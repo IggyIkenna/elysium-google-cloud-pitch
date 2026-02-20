@@ -42,9 +42,9 @@ Ireland
 ```
 Elysium Wealth Evolution Limited (Company No. 803816, Dublin, Ireland) is a dual-regulated fintech company licensed by the Central Bank of Ireland (fund administrator) and BVI (fund manager). We operate POD Labs, a revolutionary on-chain fund platform that enables emerging fund managers to launch in days (not months) at a fraction of traditional costs ($5-20K vs $50-200K).
 
-Our platform (technology partner Bankelysium) develops and operates proprietary trading and market-analysis infrastructure. It processes 5.6TB+ of multi-chain DeFi data across 6 blockchain networks and 10+ DeFi protocols for signal generation, execution optimisation, and AI-driven analytics. ML models power quarterly training and daily inference on Google Cloud Platform.
+Our platform builds on an existing relationship with Odum, who have developed substantial portions of the proprietary trading and market-analysis infrastructure used for signal generation, execution optimisation, and AI-driven analytics. This framework accelerates our time-to-market. Elysium (with technology partner Bankelysium) operates this infrastructure, processing 50TB of multi-chain DeFi data across 6 blockchain networks and 10+ DeFi protocols. ML models power price action prediction (LSTM, Transformers, LightGBM classifier) via quarterly training and daily inference; future roadmap includes HFT-ready execution signals for execution services. Vertex AI is the planned platform for ML workloads.
 
-Infrastructure: 14 microservices deployed as Cloud Run Jobs, GCS data lake with lifecycle policies, Artifact Registry for 5 shared Python libraries, Secret Manager for 50+ API keys. All workloads are AI/ML-intensive (feature engineering, model training, inference).
+Infrastructure: 14 microservices — Cloud Run Jobs for batch/T+1 backfills (instruments, tick handler, processing); long-running services for live; GCS 50TB data lake with Hive-partitioned Parquet and BigQuery external tables; Firebase for live config; Artifact Registry (5 libraries), Secret Manager (50+ keys). All workloads are AI/ML-intensive.
 
 We've raised €2M in institutional funding and currently support 5 fund managers managing $10M AUM. Target: Scale to 50+ fund managers managing $500M+ AUM within 2 years using Google Cloud credits.
 ```
@@ -96,7 +96,7 @@ Legacy fund infrastructure is expensive ($50-200K setup), slow (months to launch
 
 POD Labs solves this with an on-chain fund ledger, enabling days to launch ($5-20K setup), same-day investor onboarding, daily NAVs, and instant settlement. Our platform is regulated by the Central Bank of Ireland (fund administrator) and BVI (fund manager), providing institutional credibility while modernizing the entire capital formation process.
 
-However, the critical differentiator is AI-driven signal generation and analytics. Our platform (Bankelysium technology) processes multi-chain DeFi data (AAVE, Morpho, Uniswap, Lido) across 6 blockchain networks to generate ML-powered signals and execution optimisation. Fund managers use the infrastructure for their strategies; custody and client-facing operations are handled by regulated counterparties (POD Labs, custodians). Client exposure is limited to research, signals, or segregated mandates.
+However, the critical differentiator is AI-driven signal generation and analytics. Our platform develops and operates proprietary trading and market-analysis infrastructure used for internal strategies and institutional research partnerships. It processes multi-chain DeFi data (AAVE, Morpho, Uniswap, Lido) across 6 blockchain networks to generate ML-powered signals and execution optimisation. The platform focuses on signal generation, execution optimisation, and AI-driven analytics. Fund managers use the infrastructure for their strategies; custody and client-facing operations are handled by regulated counterparties (POD Labs, custodians). Client exposure is limited to research, signals, or segregated mandates handled by regulated counterparties.
 
 Impact: Democratizing access to alternative investments. Every fund manager we onboard creates jobs, generates returns for investors, and expands the investable universe. With Google Cloud credits, we can scale from 5 → 50+ fund managers and $10M → $500M+ AUM, enabling thousands of investors to access AI-driven strategies that were previously available only to institutional players.
 ```
@@ -104,11 +104,12 @@ Impact: Democratizing access to alternative investments. Every fund manager we o
 ### What makes you unique? (Differentiation)
 ```
 1. Dual-regulated: CBI (Ireland) + BVI fund manager licenses = credibility + compliance
-2. Production-ready: 14 services deployed, 5.6TB processed, 35%+ test coverage, quality gates enforced
+2. Production-ready: 14 services, 50TB data lake, batch/live split (Cloud Run Jobs + long-running), 35%+ test coverage
 3. Multi-chain DeFi: 6 blockchains, 10+ protocols, real-time onchain data processing
 4. AI-driven signals & analytics: ML models trained on multi-asset data (DeFi, CeFi, TradFi) for signal generation and execution optimisation
-5. Ecosystem play: POD connects managers, allocators, custodians, investors - infrastructure scales with platform
-6. Proven traction: €2M raised, 5 fund managers, $10M AUM, 140+ venue connectivity
+5. Existing framework partnership: Odum have built substantial portions of the proprietary trading and market-analysis infrastructure — accelerates time-to-market and de-risks launch
+6. Ecosystem play: POD connects managers, allocators, custodians, investors - infrastructure scales with platform
+7. Proven traction: €2M raised, 5 fund managers, $10M AUM, 140+ venue connectivity
 ```
 
 ---
@@ -121,7 +122,7 @@ Light (MVP phase with 4 instruments, 5 fund managers)
 
 Current project: central-element-323112
 Region: asia-northeast1 (Tokyo)
-Services: Cloud Run Jobs (14 services), Cloud Storage (5.6TB), Artifact Registry (5 Python packages)
+Services: Cloud Run Jobs (batch/T+1 backfills), long-running for live; GCS 50TB; Artifact Registry (5 Python packages)
 ```
 
 ### Projected 2-Year GCP Usage
@@ -129,50 +130,50 @@ Services: Cloud Run Jobs (14 services), Cloud Storage (5.6TB), Artifact Registry
 #### Year 1 Projection (Aggressive Adoption - 100% AI/ML Focused)
 | GCP Service | Usage | Monthly Cost | Annual Cost | AI/ML? |
 |-------------|-------|--------------|-------------|--------|
-| **Vertex AI (GPU Training)** | A100 GPUs, 400+ models, distributed training | $5,000 | $60,000 | ✅ Core AI |
+| **Vertex AI (GPU Training)** | Price action prediction (LSTM, Transformers, LightGBM classifier), execution optimization models, 400+ models, A100 GPUs | $5,800 | $70,000 | ✅ Core AI |
 | **Vertex AI (Gemini API)** | 160M tokens/month for AI agents | $6,000 | $72,000 | ✅ Core AI |
-| **Cloud Run Jobs** | 14 → 20 services, data processing (5.6TB → 25TB) | $4,200 | $50,400 | ✅ Feature Engineering |
-| **Cloud Storage** | 5.6TB → 25TB (multi-region) | $500 | $6,000 | Data Lake |
+| **Cloud Run Jobs** | 14 → 20 services, batch/T+1 backfills, 50TB processing | $4,200 | $50,400 | ✅ Feature Engineering |
+| **Cloud Storage** | 50TB (Hive-partitioned Parquet, multi-region) | $500 | $6,000 | Data Lake |
 | **BigQuery** | 15TB queries/month (analytics) | $300 | $3,600 | Analytics |
-| **Vertex AI Prediction** | Real-time inference endpoints | $1,500 | $18,000 | ✅ Core AI |
+| **Vertex AI Prediction** | Price action inference, real-time endpoints; future: HFT execution signals | $2,000 | $24,000 | ✅ Core AI |
 | **Cloud Build** | 150 builds/month, CI/CD | $400 | $4,800 | DevOps |
 | **Artifact Registry** | 100GB Docker + Python packages | $100 | $1,200 | DevOps |
 | **Cloud Logging** | 300GB logs/month, agent logs | $150 | $1,800 | Observability |
 | **Cloud Monitoring** | SLOs, alerts, dashboards | $150 | $1,800 | Observability |
 | **Other Services** | Load balancing, secrets, networking | $450 | $5,400 | Infrastructure |
-| **TOTAL YEAR 1** | | **$15,000** | **$180,000** | **82% AI/ML** |
+| **TOTAL YEAR 1** | | **$16,000** | **$192,000** | **86% AI/ML** |
 
 #### Year 2 Projection (Full Scale - Multi-Region + Client Platform)
 | GCP Service | Usage | Monthly Cost | Annual Cost | AI/ML? |
 |-------------|-------|--------------|-------------|--------|
-| **Vertex AI (GPU Training)** | 400+ models, ensemble learning | $10,000 | $120,000 | ✅ Core AI |
+| **Vertex AI (GPU Training)** | Price action (LSTM, Transformers, LightGBM) + execution optimization, 400+ models, ensemble learning | $11,500 | $138,000 | ✅ Core AI |
 | **Vertex AI (Gemini API)** | 160M tokens/month, client-facing agents | $12,000 | $144,000 | ✅ Core AI |
 | **Cloud Run Jobs** | 30 services, 50TB data processing | $6,000 | $72,000 | ✅ Feature Engineering |
-| **Cloud Storage** | 25TB → 50TB (3 regions) | $2,000 | $24,000 | Data Lake |
+| **Cloud Storage** | 50TB (3 regions, Hive external tables for BigQuery) | $2,000 | $24,000 | Data Lake |
 | **BigQuery** | 50TB queries/month (client platform) | $1,000 | $12,000 | Analytics |
-| **Vertex AI Prediction** | Multi-region inference endpoints | $3,000 | $36,000 | ✅ Core AI |
+| **Vertex AI Prediction** | HFT-ready execution signals, multi-region inference | $4,000 | $48,000 | ✅ Core AI |
 | **Cloud Build** | 500 builds/month | $1,200 | $14,400 | DevOps |
 | **Artifact Registry** | 500GB (30 services + history) | $500 | $6,000 | DevOps |
 | **Cloud Logging** | 1TB logs/month, 90-day retention | $600 | $7,200 | Observability |
 | **Cloud Monitoring** | 30 services, anomaly detection | $400 | $4,800 | Observability |
 | **Load Balancing & CDN** | Global routing, client platform | $500 | $6,000 | Infrastructure |
 | **Other Services** | Secrets, scheduler, networking | $650 | $7,800 | Infrastructure |
-| **TOTAL YEAR 2** | | **$16,667** | **$200,000** | **90% AI/ML** |
+| **TOTAL YEAR 2** | | **$18,167** | **$218,000** | **91% AI/ML** |
 
 **Total 2-Year Projection:**
 - **Credits-Funded:** $350,000 (100% utilized)
-- **Revenue-Funded:** $30,000 (client platform revenue)
-- **Total Spend:** $380,000
-- **Average Monthly Burn:** $15,833/month (shows serious, sustained commitment)
+- **Revenue-Funded:** $60,000 (client platform revenue)
+- **Total Spend:** $410,000
+- **Average Monthly Burn:** $17,083/month (shows serious, sustained commitment)
 
 **AI/ML Proportion:**
-- Year 1: 82% of spend is AI/ML ($148K AI/ML out of $180K total)
-- Year 2: 90% of spend is AI/ML ($180K AI/ML out of $200K total)
-- **Total AI/ML Spend: $328K over 2 years** (qualifies for full $150K AI allocation + uses base credits too)
+- Year 1: 86% of spend is AI/ML ($166K AI/ML out of $192K total)
+- Year 2: 91% of spend is AI/ML ($198K AI/ML out of $218K total)
+- **Total AI/ML Spend: $448K over 2 years** (qualifies for full $150K AI allocation + uses base credits too)
 
 ### Why Google Cloud?
 ```
-Technical fit: Cloud Run Jobs (batch-live symmetry), GCS lifecycle policies (73-77% savings on 5.6TB+ data), BigQuery external tables (zero-copy analytics), Artifact Registry (Python package hosting). 
+Technical fit: Cloud Run Jobs for batch/backtest (instruments, T+1 daily backfills); long-running VMs for live; GCS 50TB data lake with Hive-partitioned Parquet for seamless BigQuery integration (external tables); Firebase RTDB for live config and feature flags; Vertex AI planned for ML; Artifact Registry (Python packages). 
 
 Strategic fit: AI-first (ML is core), multi-cloud vision (cloud-agnostic abstractions), Web3 ecosystem alignment (DeFi focus).
 
@@ -193,9 +194,15 @@ Regional presence: asia-northeast1 (Tokyo) for low-latency DeFi execution. Plans
 
 ### Describe your AI/ML workloads in detail (400 words max)
 ```
-AI/ML is core to our entire operation, accounting for $328K of our $380K total spend (86% AI/ML focused infrastructure).
+AI/ML is core to our entire operation, accounting for 91% of our $410K total spend ($374K AI/ML—credits + revenue cover full adoption).
 
-1. GEMINI API FOR AI AGENTS ($144K over 2 years - 160M tokens/month)
+1. ML TRAINING & INFERENCE FOR PRICE ACTION ($280K over 2 years)
+Vertex AI GPU Training ($208K) + Vertex AI Prediction ($72K):
+- Price action prediction: LSTM, Transformers, LightGBM classifier trained on 50TB multi-asset data for price forecasting
+- Execution optimization models: future HFT-ready signals for execution services (low-latency inference <100ms)
+- 400+ models, A100 GPUs, distributed training; real-time inference endpoints, multi-region
+
+2. GEMINI API FOR AI AGENTS ($144K over 2 years - 160M tokens/month)
 IMMEDIATE ADOPTION upon credit approval:
 
 a) DEVELOPMENT AUTOMATION AGENTS ($72K, 80M tokens/month) - Internal:
@@ -221,14 +228,14 @@ c) CLIENT-FACING ANALYTICS AGENTS ($36K, 40M tokens/month) - External revenue-ge
 
 2. VERTEX AI GPU TRAINING ($120K over 2 years)
 Deep learning for time-series prediction:
-- Year 1: $60K - Train 400+ LSTM and Transformer models on A100 GPUs (40GB VRAM)
+- Year 1: $60K - Train 400+ models (LSTM, Transformers, LightGBM classifier) on A100 GPUs (40GB VRAM)
 - Year 2: $60K - Distributed training, ensemble models (LightGBM + deep learning), reinforcement learning
-- Model types: LSTM (sequential patterns), Transformers (attention mechanisms)
+- Model types: LSTM (sequential patterns), Transformers (attention mechanisms), LightGBM (gradient boosting classifier)
 - Use cases: Swing high/low prediction, spread forecasting, liquidity prediction, risk modeling
 
 3. DATA PROCESSING / FEATURE ENGINEERING ($122K over 2 years)
 Scale from 4 instruments → 100+ instruments (25x data volume):
-- Tick data from 140+ venues: 5.6TB → 50TB processed (9x increase)
+- Tick data from 140+ venues: 50TB processed (Hive-partitioned Parquet)
 - DeFi protocol metrics: AAVE, Morpho, Uniswap V3, Lido, EtherFi across 15+ blockchains
 - Calendar events: Economic releases, earnings, protocol governance
 - Volatility calculations: Historical, implied, realized across 7 timeframes
@@ -246,25 +253,25 @@ Deploy production inference endpoints for real-time predictions:
 
 5. BIGQUERY ANALYTICS ($15.6K over 2 years)
 Client platform queries + internal analytics:
-- External tables on GCS Parquet data (zero-copy analytics)
+- Hive external tables on GCS Parquet (key=value partitioning) for seamless BigQuery integration
 - Materialized views for fast client queries (10-20x speedup)
 - Natural language → SQL via Gemini agents
 - Custom analytics for fund managers and investors
 
 **TOTAL AI/ML SPEND BREAKDOWN:**
 - Gemini API (AI Agents): $144K (38% of AI/ML spend) - 160M tokens/month
-- Vertex AI GPU Training: $120K (32% of AI/ML spend) - 400+ models
+- Vertex AI GPU Training: $208K (46% of AI/ML spend) - 400+ models, price action prediction, execution optimization
 - Data Processing: $122K (32% of AI/ML spend) - Feature engineering at scale
-- Vertex AI Prediction: $54K (14% of AI/ML spend) - Real-time inference
+- Vertex AI Prediction: $72K (16% of AI/ML spend) - Price action inference, future HFT execution signals
 - BigQuery Analytics: $15.6K (4% of AI/ML spend) - Client queries
 
 **TOTAL: $455.6K AI/ML spend over 2 years** (credits cover $350K = 77% of AI/ML infrastructure)
 
-Current state: 16 CPU-based models, 5.6TB data, batch inference, no AI agents
-Target (2-year with credits): 400+ GPU-based models, 50TB data, real-time inference, 160M tokens/month AI agents
+Current state: 16 CPU-based models, 50TB data lake, batch inference, no AI agents
+Target (2-year with credits): 400+ GPU-based models on Vertex AI (price action prediction, execution optimization), real-time inference + HFT-ready execution signals, 160M tokens/month AI agents
 
 **CRITICAL**: Without $350K Google Cloud credits, we cannot afford:
-1. Vertex AI GPU training ($120K) - would be limited to basic CPU models (3-4x slower, less accurate)
+1. Vertex AI GPU training ($208K) - would be limited to basic CPU models (3-4x slower, less accurate); no price action prediction at scale
 2. Gemini AI agents ($144K) - would need $3M-5M additional engineering headcount
 3. Data processing scale-up ($122K) - would stay at 4 instruments (vs 100+)
 
@@ -277,43 +284,32 @@ Credits enable immediate parity with institutional players' AI capabilities. Wit
 
 ### Describe your technical architecture (300 words max)
 ```
-MICROSERVICES ARCHITECTURE (14 Services):
+MICROSERVICES ARCHITECTURE (14 Services) — See unified-trading-codex/04-architecture, 07-services:
+
+BATCH vs LIVE (batch-live symmetry per codex):
+- Batch/Backtest: Cloud Run Jobs (scheduled), GCS as data source, T+1 daily backfills (instruments → tick handler → processing). Date-loop trigger.
+- Live: Long-running VMs (Cloud Run services always-on), Pub/Sub, event-driven. Firebase RTDB for live config and feature flags.
 
 Data Layer:
-- instruments-service: 140+ venues, 10,000+ investable universe
-- market-tick-data-handler: Real-time tick data ingestion (Cloud Run 64Gi RAM, GCS 5.6TB)
+- instruments-service: 140+ venues, 10,000+ investable universe (Cloud Run Jobs for batch)
+- market-tick-data-handler: Tick ingestion (Cloud Run 64Gi RAM), T+1 backfills + live streaming
 - market-data-processing-service: Candle aggregation (7 timeframes)
 
-Feature Engineering Layer:
-- features-delta-one: Delta-neutral features
-- features-calendar: Economic calendar events
-- features-volatility: Vol calculations
-- features-onchain: DeFi protocol metrics (AAVE, Morpho, Uniswap, Lido)
+Feature Engineering → AI/ML → Strategy → Execution:
+- features-delta-one, features-calendar, features-volatility, features-onchain
+- ml-training-service: Quarterly (Vertex AI GPU for price action); ml-inference-service: Daily (real-time inference; future: HFT execution signals)
+- strategy-service, execution-services, risk-and-exposure-service, position-balance-monitor
 
-AI/ML Pipeline:
-- ml-training-service: Quarterly LightGBM training (Cloud Run 16Gi RAM)
-- ml-inference-service: Daily predictions
+Storage & Analytics:
+- GCS 50TB data lake, Hive-partitioned Parquet (key=value: day=, venue=, instrument_type=)
+- Hive external tables for seamless BigQuery integration (zero-copy analytics)
+- Lifecycle policies: STANDARD → NEARLINE → COLDLINE → ARCHIVE
 
-Strategy & Execution:
-- strategy-service: Signal generation
-- execution-services: Multi-chain execution
-- risk-and-exposure-service: Real-time risk monitoring
-- position-balance-monitor: Portfolio tracking
+ML: Vertex AI planned for training, prediction endpoints, feature store (credits enable deployment).
 
 Infrastructure:
-- 5 shared libraries (Artifact Registry): unified-cloud-services, unified-events-interface, unified-config-interface, unified-market-interface, unified-order-interface
-- CI/CD: Cloud Build (E2_HIGHCPU_32), quality gates, test-in-image pattern
-- Observability: Cloud Logging (structured JSON), 3-tier event logging (11 lifecycle events per service)
-- Storage: GCS with lifecycle policies (STANDARD → NEARLINE → COLDLINE → ARCHIVE)
-
-CLOUD-AGNOSTIC DESIGN:
-- Abstractions for GCP and AWS (60% AWS migration complete)
-- Batch-live symmetry (same code for historical backtesting and live trading)
-
-QUALITY STANDARDS:
-- 35%+ test coverage with quality gates enforced
-- Ruff linting (v0.15.0 consistent across local, GitHub Actions, Cloud Build)
-- Pre-commit hooks (prek manager)
+- 5 shared libraries (Artifact Registry), Cloud Build, Firebase (config), Secret Manager
+- 3-tier event logging, 35%+ test coverage, Ruff v0.15.0
 ```
 
 ### Security & Compliance
@@ -347,7 +343,7 @@ With credits: Deploy $270K of advanced GCP infrastructure immediately:
    - Capture cross-chain arbitrage opportunities
 
 3. Advanced ML Infrastructure
-   - Invest in Vertex AI GPU training (LSTM, Transformers)
+   - Invest in Vertex AI GPU training (LSTM, Transformers, LightGBM)
    - Real-time ensemble models (LightGBM + deep learning)
    - Transfer learning across instruments and asset classes
    - Reinforcement learning for execution optimization
@@ -363,7 +359,7 @@ With credits: Deploy $270K of advanced GCP infrastructure immediately:
    - Handle 1,000+ investor accounts (vs 50 today)
 
 AGGRESSIVE VERTEX AI ADOPTION ($120K immediately):
-- $60K Year 1: Train 400+ deep learning models (LSTM, Transformers) on A100 GPUs
+- $60K Year 1: Train 400+ models (LSTM, Transformers, LightGBM classifier) on A100 GPUs
 - $60K Year 2: Distributed training, ensemble models, reinforcement learning
 - Without credits: Would take 4+ years to afford this infrastructure
 - With credits: Immediate parity with institutional players' AI capabilities
@@ -397,13 +393,15 @@ CRITICAL: 77% utilization ($270K) demonstrates serious commitment to Google Clou
 ```
 No legal affiliation.
 
-Elysium Wealth Evolution Limited (Ireland Co. 803816) is legally separate from Odum and any other entities. There is no legal tie, no common shareholders, and no business relationship beyond potential commercial partnerships.
+Elysium Wealth Evolution Limited (Ireland Co. 803816) is legally separate from Odum and any other entities. There is no legal tie, no common shareholders, and no shared Google Cloud credits.
 
-Key distinctions:
+Elysium has an existing relationship with Odum, who have built substantial portions of the proprietary trading and market-analysis framework that enables this platform to launch. Odum develops and operates proprietary trading and market-analysis infrastructure used for internal strategies and institutional research partnerships. The platform focuses on signal generation, execution optimisation, and AI-driven analytics. Client exposure, where applicable, is limited to research, signals, or segregated mandates handled by regulated counterparties. This framework accelerates Elysium's time-to-market.
+
+Key distinctions (no conflict with credits):
 1. Separate legal entity: Elysium (Ireland Co. 803816) vs Odum (separate entity)
 2. Separate GCP project: central-element-323112 (Elysium trading engine) vs Odum's project(s)
 3. Separate codebase: 14 microservices, 5 shared libraries (Elysium's trading infrastructure)
-4. Distinct use case: AI trading infrastructure (signal generation, execution optimisation, analytics) vs [Odum's use case]
+4. Distinct use case: AI trading infrastructure (signal generation, execution optimisation, analytics)
 5. Independent funding: Elysium raised €2M separately, not affiliated with Odum's funding
 6. Separate team: Elysium's technical team focused on DeFi trading strategies
 

@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
             'Month 19', 'Month 20', 'Month 21', 'Month 22', 'Month 23', 'Month 24'
         ];
         
-        // Year 1: $180,000 / 12 = $15,000/month (Vertex AI + Gemini agents + data processing)
-        // Year 2: $200,000 / 12 = $16,667/month (full scale + multi-region + client platform)
-        const year1Monthly = 15000;
-        const year2Monthly = 16667;
+        // Year 1: $192,000 / 12 = $16,000/month (ML training price action + inference + Gemini agents)
+        // Year 2: $218,000 / 12 = $18,167/month (HFT-ready inference + multi-region + client platform)
+        const year1Monthly = 16000;
+        const year2Monthly = 18167;
         
         const monthlySpend = [
             ...Array(12).fill(year1Monthly),
@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     {
                         label: 'Monthly Spend ($)',
                         data: monthlySpend,
-                        borderColor: '#1a73e8',
-                        backgroundColor: 'rgba(26, 115, 232, 0.1)',
+                        borderColor: '#60a5fa',
+                        backgroundColor: 'rgba(96, 165, 250, 0.15)',
                         borderWidth: 2,
                         fill: true,
                         tension: 0.4,
@@ -67,8 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     {
                         label: 'Cumulative Spend ($)',
                         data: cumulativeSpend,
-                        borderColor: '#34a853',
-                        backgroundColor: 'rgba(52, 168, 83, 0.1)',
+                        borderColor: '#34d399',
+                        backgroundColor: 'rgba(52, 211, 153, 0.15)',
                         borderWidth: 2,
                         fill: true,
                         tension: 0.4,
@@ -78,8 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     {
                         label: 'Credits Remaining ($)',
                         data: creditsRemaining,
-                        borderColor: '#9334e6',
-                        backgroundColor: 'rgba(147, 52, 230, 0.1)',
+                        borderColor: '#a78bfa',
+                        backgroundColor: 'rgba(167, 139, 250, 0.15)',
                         borderWidth: 2,
                         fill: true,
                         tension: 0.4,
@@ -99,9 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         font: {
                             size: 18,
                             weight: 'bold',
-                            family: 'Roboto'
+                            family: 'ui-sans-serif, system-ui, sans-serif'
                         },
-                        color: '#202124',
+                        color: '#f8fafc',
                         padding: 20
                     },
                     legend: {
@@ -110,19 +110,19 @@ document.addEventListener('DOMContentLoaded', () => {
                         labels: {
                             font: {
                                 size: 14,
-                                family: 'Roboto'
+                                family: 'ui-sans-serif, system-ui, sans-serif'
                             },
-                            color: '#5f6368',
+                            color: 'rgba(255,255,255,0.72)',
                             usePointStyle: true,
                             padding: 15
                         }
                     },
                     tooltip: {
                         enabled: true,
-                        backgroundColor: 'rgba(32, 33, 36, 0.9)',
+                        backgroundColor: 'rgba(11, 18, 32, 0.95)',
                         titleColor: '#ffffff',
                         bodyColor: '#ffffff',
-                        borderColor: '#1a73e8',
+                        borderColor: '#34d399',
                         borderWidth: 1,
                         padding: 12,
                         displayColors: true,
@@ -155,12 +155,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             },
                             font: {
                                 size: 12,
-                                family: 'Roboto'
+                                family: 'ui-sans-serif, system-ui, sans-serif'
                             },
-                            color: '#5f6368'
+                            color: 'rgba(255,255,255,0.55)'
                         },
                         grid: {
-                            color: 'rgba(218, 220, 224, 0.5)'
+                            color: 'rgba(255,255,255,0.12)'
                         }
                     },
                     x: {
@@ -169,9 +169,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             minRotation: 45,
                             font: {
                                 size: 10,
-                                family: 'Roboto'
+                                family: 'ui-sans-serif, system-ui, sans-serif'
                             },
-                            color: '#5f6368'
+                            color: 'rgba(255,255,255,0.55)'
                         },
                         grid: {
                             display: false
@@ -207,15 +207,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 datasets: [{
                     data: [19854, 2025, 3000, 829, 600, 1305],
                     backgroundColor: [
-                        '#1a73e8',
-                        '#34a853',
-                        '#fbbc04',
-                        '#ea4335',
-                        '#9334e6',
-                        '#5f6368'
+                        '#60a5fa',
+                        '#34d399',
+                        '#fbbf24',
+                        '#fb7185',
+                        '#a78bfa',
+                        'rgba(255,255,255,0.4)'
                     ],
                     borderWidth: 2,
-                    borderColor: '#ffffff'
+                    borderColor: '#0b1220'
                 }]
             },
             options: {
@@ -228,9 +228,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         font: {
                             size: 18,
                             weight: 'bold',
-                            family: 'Roboto'
+                            family: 'ui-sans-serif, system-ui, sans-serif'
                         },
-                        color: '#202124',
+                        color: '#f8fafc',
                         padding: 20
                     },
                     legend: {
@@ -238,15 +238,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         labels: {
                             font: {
                                 size: 14,
-                                family: 'Roboto'
+                                family: 'ui-sans-serif, system-ui, sans-serif'
                             },
-                            color: '#5f6368',
+                            color: 'rgba(255,255,255,0.72)',
                             padding: 15
                         }
                     },
                     tooltip: {
                         enabled: true,
-                        backgroundColor: 'rgba(32, 33, 36, 0.9)',
+                        backgroundColor: 'rgba(11, 18, 32, 0.95)',
                         callbacks: {
                             label: function(context) {
                                 const label = context.label || '';
@@ -283,22 +283,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     {
                         label: 'Current (MVP)',
                         data: [4, 10, 6, 5, 16],
-                        backgroundColor: 'rgba(234, 67, 53, 0.7)',
-                        borderColor: '#ea4335',
+                        backgroundColor: 'rgba(251, 113, 133, 0.7)',
+                        borderColor: '#fb7185',
                         borderWidth: 1
                     },
                     {
                         label: 'Year 1',
                         data: [20, 18, 10, 20, 80],
-                        backgroundColor: 'rgba(251, 188, 4, 0.7)',
-                        borderColor: '#fbbc04',
+                        backgroundColor: 'rgba(251, 191, 36, 0.7)',
+                        borderColor: '#fbbf24',
                         borderWidth: 1
                     },
                     {
                         label: 'Year 2',
                         data: [100, 25, 15, 50, 400],
-                        backgroundColor: 'rgba(52, 168, 83, 0.7)',
-                        borderColor: '#34a853',
+                        backgroundColor: 'rgba(52, 211, 153, 0.7)',
+                        borderColor: '#34d399',
                         borderWidth: 1
                     }
                 ]
@@ -313,9 +313,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         font: {
                             size: 18,
                             weight: 'bold',
-                            family: 'Roboto'
+                            family: 'ui-sans-serif, system-ui, sans-serif'
                         },
-                        color: '#202124',
+                        color: '#f8fafc',
                         padding: 20
                     },
                     legend: {
@@ -324,9 +324,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         labels: {
                             font: {
                                 size: 14,
-                                family: 'Roboto'
+                                family: 'ui-sans-serif, system-ui, sans-serif'
                             },
-                            color: '#5f6368',
+                            color: 'rgba(255,255,255,0.72)',
                             padding: 15
                         }
                     },
@@ -340,21 +340,21 @@ document.addEventListener('DOMContentLoaded', () => {
                         ticks: {
                             font: {
                                 size: 12,
-                                family: 'Roboto'
+                                family: 'ui-sans-serif, system-ui, sans-serif'
                             },
-                            color: '#5f6368'
+                            color: 'rgba(255,255,255,0.55)'
                         },
                         grid: {
-                            color: 'rgba(218, 220, 224, 0.5)'
+                            color: 'rgba(255,255,255,0.12)'
                         }
                     },
                     x: {
                         ticks: {
                             font: {
                                 size: 12,
-                                family: 'Roboto'
+                                family: 'ui-sans-serif, system-ui, sans-serif'
                             },
-                            color: '#5f6368'
+                            color: 'rgba(255,255,255,0.55)'
                         },
                         grid: {
                             display: false
@@ -379,14 +379,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 datasets: [{
                     label: 'AUM ($ Millions)',
                     data: [10, 20, 35, 55, 80, 100, 150, 225, 325, 450, 500],
-                    borderColor: '#34a853',
-                    backgroundColor: 'rgba(52, 168, 83, 0.2)',
+                    borderColor: '#34d399',
+                    backgroundColor: 'rgba(52, 211, 153, 0.2)',
                     borderWidth: 3,
                     fill: true,
                     tension: 0.4,
                     pointRadius: 5,
                     pointHoverRadius: 7,
-                    pointBackgroundColor: '#34a853',
+                    pointBackgroundColor: '#34d399',
                     pointBorderColor: '#ffffff',
                     pointBorderWidth: 2
                 }]
@@ -401,16 +401,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         font: {
                             size: 18,
                             weight: 'bold',
-                            family: 'Roboto'
+                            family: 'ui-sans-serif, system-ui, sans-serif'
                         },
-                        color: '#202124',
+                        color: '#f8fafc',
                         padding: 20
                     },
                     legend: {
                         display: false
                     },
                     tooltip: {
-                        backgroundColor: 'rgba(32, 33, 36, 0.9)',
+                        backgroundColor: 'rgba(11, 18, 32, 0.95)',
                         callbacks: {
                             label: function(context) {
                                 return 'AUM: $' + context.parsed.y + 'M';
@@ -427,21 +427,21 @@ document.addEventListener('DOMContentLoaded', () => {
                             },
                             font: {
                                 size: 12,
-                                family: 'Roboto'
+                                family: 'ui-sans-serif, system-ui, sans-serif'
                             },
-                            color: '#5f6368'
+                            color: 'rgba(255,255,255,0.55)'
                         },
                         grid: {
-                            color: 'rgba(218, 220, 224, 0.5)'
+                            color: 'rgba(255,255,255,0.12)'
                         }
                     },
                     x: {
                         ticks: {
                             font: {
                                 size: 12,
-                                family: 'Roboto'
+                                family: 'ui-sans-serif, system-ui, sans-serif'
                             },
-                            color: '#5f6368'
+                            color: 'rgba(255,255,255,0.55)'
                         },
                         grid: {
                             display: false
@@ -467,16 +467,16 @@ document.addEventListener('DOMContentLoaded', () => {
         new Chart(creditUtilizationCtx, {
             type: 'doughnut',
             data: {
-                labels: ['Year 1 Credits ($180K)', 'Year 2 Credits ($170K)', 'Revenue-Funded ($30K)'],
+                labels: ['Year 1 ($192K)', 'Year 2 from Credits ($158K)', 'Revenue-Funded ($60K)'],
                 datasets: [{
-                    data: [180000, 170000, 30000],
+                    data: [192000, 158000, 60000],
                     backgroundColor: [
-                        '#1a73e8',
-                        '#34a853',
-                        '#9334e6'
+                        '#60a5fa',
+                        '#34d399',
+                        '#a78bfa'
                     ],
                     borderWidth: 2,
-                    borderColor: '#ffffff'
+                    borderColor: '#0b1220'
                 }]
             },
             options: {
@@ -489,9 +489,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         font: {
                             size: 18,
                             weight: 'bold',
-                            family: 'Roboto'
+                            family: 'ui-sans-serif, system-ui, sans-serif'
                         },
-                        color: '#202124',
+                        color: '#f8fafc',
                         padding: 20
                     },
                     legend: {
@@ -499,14 +499,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         labels: {
                             font: {
                                 size: 14,
-                                family: 'Roboto'
+                                family: 'ui-sans-serif, system-ui, sans-serif'
                             },
-                            color: '#5f6368',
+                            color: 'rgba(255,255,255,0.72)',
                             padding: 15
                         }
                     },
                     tooltip: {
-                        backgroundColor: 'rgba(32, 33, 36, 0.9)',
+                        backgroundColor: 'rgba(11, 18, 32, 0.95)',
                         callbacks: {
                             label: function(context) {
                                 const label = context.label || '';
